@@ -6,8 +6,9 @@ var player
 var player_inside = false
 
 func _ready():
-    player = get_node_or_null("/root/Level1/Player")
-    if player:
+    var players = get_tree().get_nodes_in_group("player")
+    if players.size() > 0:
+        player = players[0]
         player.connect("dashing", self, "_on_player_dashing")
         connect("body_entered", self, "_on_body_entered")
         connect("body_exited", self, "_on_body_exited")

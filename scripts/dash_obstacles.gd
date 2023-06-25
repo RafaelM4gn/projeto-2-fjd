@@ -3,8 +3,9 @@ extends StaticBody2D
 var player
 
 func _ready():
-	player = get_node_or_null("/root/Level1/Player")
-	if player:
+	var players = get_tree().get_nodes_in_group("player")
+	if players.size() > 0:
+		player = players[0]
 		player.connect("dashing", self, "_on_player_dashing")
 	else:
 		print("Nó do jogador não encontrado")
@@ -36,3 +37,4 @@ func _restart_level():
 	# Reinicie a fase aqui. Isso depende de como seu projeto está configurado.
 	# Por exemplo, se você está usando cenas para representar níveis, você pode recarregar a cena atual:
 	get_tree().reload_current_scene()
+
