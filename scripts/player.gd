@@ -7,6 +7,9 @@ var is_dashing = false
 var can_dash = false
 var dash_direction = Vector2()
 
+# Adicione este sinal
+signal dashing(is_dashing)
+
 func _physics_process(delta):
 	var direction = Vector2(0, 0)
 
@@ -30,13 +33,16 @@ func _physics_process(delta):
 func start_dash(direction):
 	if !is_dashing and direction.length() > 0 and can_dash:
 		is_dashing = true
+		# Emita o sinal aqui
+		emit_signal("dashing", is_dashing)
 		can_dash = false  # Consumir o dash
 		dash_direction = direction.normalized()
 		get_tree().create_timer(dash_duration).connect("timeout", self, "end_dash")
 
 func end_dash():
 	is_dashing = false
+	# Emita o sinal aqui também
+	emit_signal("dashing", is_dashing)
 
 func allow_dash():
 	can_dash = true
-
