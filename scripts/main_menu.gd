@@ -13,7 +13,7 @@ func _ready():
 
 func _on_PlayButton_pressed():
 	# Carrega e muda para a cena level0.tscn quando o botão Play é pressionado
-	var level = load("res://scenes/levels/level0.tscn")
+	var level = load("res://scenes/levels/Level0.tscn")
 	get_tree().change_scene_to(level)
 
 func _on_QuitButton_pressed():

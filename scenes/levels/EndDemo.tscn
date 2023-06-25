@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 374.0
+margin_top = 202.0
+margin_right = 626.0
+margin_bottom = 286.0
+text = "FIM DA DEMO, OBRIGADO POR JOGAR!"

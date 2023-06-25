@@ -38,4 +38,4 @@ shape = SubResource( 2 )
 
 [node name="OrbRoot" parent="." instance=ExtResource( 2 )]
 position = Vector2( 824, 307 )
-next_scene_filename = "level1.tscn"
+next_scene_filename = "Level1.tscn"
