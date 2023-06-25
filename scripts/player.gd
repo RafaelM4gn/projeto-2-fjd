@@ -4,6 +4,7 @@ export var speed = 200
 export var dash_speed = 600
 export var dash_duration = 0.3
 var is_dashing = false
+var can_dash = false
 var dash_direction = Vector2()
 
 func _physics_process(delta):
@@ -22,15 +23,20 @@ func _physics_process(delta):
 			direction.y -= 1
 		direction = direction.normalized()
 		move_and_slide(direction * speed)
-	
+
 		if Input.is_action_just_pressed("dash"):
 			start_dash(direction)
 
 func start_dash(direction):
-	if !is_dashing and direction.length() > 0:
+	if !is_dashing and direction.length() > 0 and can_dash:
 		is_dashing = true
+		can_dash = false  # Consumir o dash
 		dash_direction = direction.normalized()
 		get_tree().create_timer(dash_duration).connect("timeout", self, "end_dash")
 
 func end_dash():
 	is_dashing = false
+
+func allow_dash():
+	can_dash = true
+
