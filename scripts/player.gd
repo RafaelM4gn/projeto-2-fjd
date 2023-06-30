@@ -4,7 +4,7 @@ export var speed = 200
 export var dash_speed = 600
 export var dash_duration = 0.3
 var is_dashing = false
-var can_dash = false
+var can_dash = true
 var dash_direction = Vector2()
 
 # Adicione este sinal
