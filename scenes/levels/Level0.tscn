@@ -2,40 +2,18 @@
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/collectibles/YellowOrb.tscn" type="PackedScene" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 99.3186, 25.7981 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 539.5, 37.5 )
+[ext_resource path="res://scenes/environment/BaseScenario.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/environment/BaseScenarioOver.tscn" type="PackedScene" id=4]
 
 [node name="Level0" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 181, 298 )
-
-[node name="Walls" type="Node2D" parent="."]
-
-[node name="BaseWalls" type="StaticBody2D" parent="Walls"]
-
-[node name="BaseWallVertical2" type="CollisionShape2D" parent="Walls/BaseWalls"]
-position = Vector2( -84, 304 )
-scale = Vector2( 0.845763, 11.7596 )
-shape = SubResource( 1 )
-
-[node name="BaseWallVertical" type="CollisionShape2D" parent="Walls/BaseWalls"]
-position = Vector2( 1107, 301.625 )
-scale = Vector2( 0.845763, 11.7596 )
-shape = SubResource( 1 )
-
-[node name="BaseWallHorizontal2" type="CollisionShape2D" parent="Walls/BaseWalls"]
-position = Vector2( 527, -32 )
-shape = SubResource( 2 )
-
-[node name="BaseWallHorizontal" type="CollisionShape2D" parent="Walls/BaseWalls"]
-position = Vector2( 517, 641 )
-shape = SubResource( 2 )
+[node name="Walls" parent="." instance=ExtResource( 3 )]
 
 [node name="OrbRoot" parent="." instance=ExtResource( 2 )]
-position = Vector2( 264, 296 )
+position = Vector2( 320, 91 )
 next_scene_filename = "Level1.tscn"
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 50, 90 )
+
+[node name="walls_over" parent="." instance=ExtResource( 4 )]

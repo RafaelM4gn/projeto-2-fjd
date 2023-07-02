@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/background/background_limits.png" type="Texture" id=1]
+[ext_resource path="res://assets/background/background_base.png" type="Texture" id=2]
+
+[node name="BaseScenario" type="Node2D"]
+
+[node name="BaseWalls" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BaseWalls"]
+polygon = PoolVector2Array( 0, 0, 319, 0, 319, 70, 316, 70, 312, 68, 312, 24, 14, 24, 14, 68, 9, 70, 4, 70, 0, 67 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="BaseWalls"]
+position = Vector2( 320, 181 )
+rotation = 3.14159
+polygon = PoolVector2Array( 0, 0, 319, 0, 320, 51.0014, 306, 51.0014, 306, 12.0014, 7.99994, 14, 7.99979, 51, -0.000213623, 51 )
+
+[node name="BackgroundBase" type="Sprite" parent="."]
+position = Vector2( 160, 90 )
+texture = ExtResource( 2 )
+
+[node name="BackgroundLimits" type="Sprite" parent="."]
+position = Vector2( 160, 90 )
+texture = ExtResource( 1 )
