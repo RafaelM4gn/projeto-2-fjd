@@ -15,7 +15,7 @@
 position = Vector2( 40, 90 )
 
 [node name="OrbRoot" parent="." instance=ExtResource( 2 )]
-position = Vector2( 319, 91 )
+position = Vector2( 323, 82 )
 next_scene_filename = "EndDemo.tscn"
 
 [node name="KillOnTouchObstacle" parent="." instance=ExtResource( 4 )]

@@ -598,4 +598,5 @@ frame = 70
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 69 )
 animation = "idle_with_dash"
+frame = 3
 playing = true

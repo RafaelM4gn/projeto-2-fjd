@@ -13,11 +13,11 @@
 [node name="BaseScenario" parent="." instance=ExtResource( 6 )]
 
 [node name="OrbRoot" parent="." instance=ExtResource( 1 )]
-position = Vector2( 322, 91 )
+position = Vector2( 323, 84 )
 next_scene_filename = "Level2.tscn"
 
-[node name="DashOrbRoot4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 167, 66 )
+[node name="DashOrb" parent="." instance=ExtResource( 3 )]
+position = Vector2( 167, 49 )
 
 [node name="levelElements" type="Node2D" parent="."]
 position = Vector2( -39, -1 )

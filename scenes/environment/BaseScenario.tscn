@@ -11,9 +11,9 @@
 polygon = PoolVector2Array( 0, 0, 319, 0, 319, 70, 316, 70, 312, 68, 312, 24, 14, 24, 14, 68, 9, 70, 4, 70, 0, 67 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="BaseWalls"]
-position = Vector2( 320, 181 )
+position = Vector2( 320, 180 )
 rotation = 3.14159
-polygon = PoolVector2Array( 0, 0, 319, 0, 320, 51.0014, 306, 51.0014, 306, 12.0014, 7.99994, 14, 7.99979, 51, -0.000213623, 51 )
+polygon = PoolVector2Array( 0, 0, 320, 0.000808716, 320, 51.0014, 320, 112.001, 319, 112.001, 319, 51.0008, 306, 51.0014, 306, 2.00078, 8, 2.00002, 7.99979, 51, -0.000213623, 51 )
 
 [node name="BackgroundBase" type="Sprite" parent="."]
 position = Vector2( 160, 90 )

@@ -7,13 +7,13 @@
 
 [node name="Level0" type="Node2D"]
 
-[node name="Walls" parent="." instance=ExtResource( 3 )]
+[node name="BaseScenario" parent="." instance=ExtResource( 3 )]
 
 [node name="OrbRoot" parent="." instance=ExtResource( 2 )]
-position = Vector2( 320, 91 )
+position = Vector2( 323, 85 )
 next_scene_filename = "Level1.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 50, 90 )
 
-[node name="walls_over" parent="." instance=ExtResource( 4 )]
+[node name="BaseScenarioOver" parent="." instance=ExtResource( 4 )]
