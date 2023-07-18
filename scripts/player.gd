@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var max_speed = 100 
+export var max_speed = 80 
 export var dash_speed = 150
 export var dash_duration = 0.5 # afeta animacao
 var dash_elapsed_time = 0.0
@@ -97,10 +97,7 @@ func set_dash_animation_frame(direction, frame_index):
 
 func play_animation(base_animation_name):
 	var animation_name = base_animation_name
-	if animation_name == "idle":
-		$AnimatedSprite.speed_scale = 2.25  # Velocidade normal para outras animações
-	else:
-		$AnimatedSprite.speed_scale = 1.0  # Velocidade normal para outras animações
+	$AnimatedSprite.speed_scale = 15.0  # Velocidade normal para outras animações
 	if can_dash:
 		animation_name += "_with_dash"
 	
