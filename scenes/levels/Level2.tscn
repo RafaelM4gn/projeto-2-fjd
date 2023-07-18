@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
+[ext_resource path="res://scenes/environment/HolesSprites.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/collectibles/YellowOrb.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/collectibles/DashOrb.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/environment/KillOnTouchObstacle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/environment/BaseScenario.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/environment/BaseScenarioOver.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/environment/DashObstacles.tscn" type="PackedScene" id=8]
 
 [node name="Level2" type="Node2D"]
 
@@ -13,6 +15,39 @@
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 40, 90 )
+
+[node name="DashOrbRoot2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 50, 51 )
+
+[node name="DashOrbRoot3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 35, 141 )
+
+[node name="DashOrbRoot4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 76, 45 )
+
+[node name="DashOrbRoot5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 74, 71 )
+
+[node name="DashOrbRoot6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 108, 46 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="HolesSheet3" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 199.281, 65.1875 )
+scale = Vector2( 1.84375, 0.78125 )
+offset = Vector2( 5, -6 )
+frame = 0
+
+[node name="HolesSheet" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 188, 66 )
+offset = Vector2( 5, -6 )
+frame = 2
+
+[node name="HolesSheet2" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 220, 66 )
+offset = Vector2( 5, -6 )
+frame = 4
 
 [node name="OrbRoot" parent="." instance=ExtResource( 2 )]
 position = Vector2( 323, 82 )
@@ -23,5 +58,11 @@ position = Vector2( 157, 128 )
 
 [node name="DashOrbRoot" parent="." instance=ExtResource( 3 )]
 position = Vector2( 58, 127 )
+
+[node name="DashObstacle" parent="." instance=ExtResource( 8 )]
+position = Vector2( 193, 60 )
+
+[node name="DashObstacle2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 225, 60 )
 
 [node name="BaseScenarioOver" parent="." instance=ExtResource( 7 )]

@@ -14,13 +14,13 @@
 position = Vector2( 323, 85 )
 next_scene_filename = "Level1.tscn"
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 50, 90 )
-
-[node name="BaseScenarioOver" parent="." instance=ExtResource( 4 )]
-
 [node name="KillOnTouchObstacle" parent="." instance=ExtResource( 5 )]
 position = Vector2( 162, 116 )
 
 [node name="KillOnTouchObstacle2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 229, 76 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 50, 90 )
+
+[node name="BaseScenarioOver" parent="." instance=ExtResource( 4 )]
