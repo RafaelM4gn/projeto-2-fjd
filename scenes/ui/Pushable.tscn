@@ -11,8 +11,5 @@ collision_layer = 129
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="YellowOrbTemp" type="Sprite" parent="."]
-scale = Vector2( 0.460938, 0.4375 )
+[node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 64, 64 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/yellow_orb_temp.png-fa8e1392b448fb606a3ecc7ade968f83.stex"
+path="res://.import/water.png-c4dad6bb5b117c9e3949dc4b98e222cc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/collectibles/yellow_orb_temp.png"
-dest_files=[ "res://.import/yellow_orb_temp.png-fa8e1392b448fb606a3ecc7ade968f83.stex" ]
+source_file="res://assets/collectibles/water.png"
+dest_files=[ "res://.import/water.png-c4dad6bb5b117c9e3949dc4b98e222cc.stex" ]
 
 [params]
 
