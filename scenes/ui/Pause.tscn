@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/ui/carcara_font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/ui/Pause.gd" type="Script" id=2]
+[ext_resource path="res://assets/ui/carcara_font2.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Pause" type="Control" parent="."]
+pause_mode = 2
+margin_right = 320.0
+margin_bottom = 180.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="Pause"]
+margin_right = 320.0
+margin_bottom = 180.0
+color = Color( 0, 0, 0, 0.243137 )
+
+[node name="Label" type="Label" parent="Pause"]
+anchor_right = 1.0
+margin_top = 7.0
+margin_right = 3.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 1 )
+text = "PAUSE"
+align = 1
+valign = 1
+
+[node name="Resume" type="Button" parent="Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -25.0
+margin_right = 32.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 2 )
+text = "Resume"
+
+[node name="Restart" type="Button" parent="Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = 5.0
+margin_right = 32.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 5 )
+text = "Restart"
+
+[node name="Exit" type="Button" parent="Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = 35.0
+margin_right = 32.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 3 )
+text = "Exit"
+
+[connection signal="pressed" from="Pause/Resume" to="Pause" method="_on_Resume_pressed"]
+[connection signal="pressed" from="Pause/Restart" to="Pause" method="_on_Restart_pressed"]
+[connection signal="pressed" from="Pause/Exit" to="Pause" method="_on_Exit_pressed"]

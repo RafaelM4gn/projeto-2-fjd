@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/collectibles/YellowOrb.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/environment/BaseScenario.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/environment/BaseScenarioOver.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/ui/Pause.tscn" type="PackedScene" id=5]
+
+[node name="Level0" type="Node2D"]
+
+[node name="BaseScenario" parent="." instance=ExtResource( 3 )]
+
+[node name="OrbRoot" parent="." instance=ExtResource( 2 )]
+position = Vector2( 323, 85 )
+next_scene_filename = "Level1.tscn"
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 50, 90 )
+
+[node name="BaseScenarioOver" parent="." instance=ExtResource( 4 )]
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
