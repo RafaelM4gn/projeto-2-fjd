@@ -1,0 +1,136 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/collectibles/YellowOrb.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/collectibles/DashOrb.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/environment/DashObstacles.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/environment/HolesSprites.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/environment/BaseScenario.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/environment/BaseScenarioOver.tscn" type="PackedScene" id=7]
+
+[node name="Level1" type="Node2D"]
+
+[node name="BaseScenario" parent="." instance=ExtResource( 6 )]
+
+[node name="OrbRoot" parent="." instance=ExtResource( 1 )]
+position = Vector2( 323, 84 )
+next_scene_filename = "Level2.tscn"
+
+[node name="DashOrb" parent="." instance=ExtResource( 3 )]
+position = Vector2( 167, 49 )
+
+[node name="levelElements" type="Node2D" parent="."]
+position = Vector2( -39, -1 )
+
+[node name="DashObstacle" parent="levelElements" instance=ExtResource( 4 )]
+position = Vector2( 157, 106 )
+scale = Vector2( 1, 5 )
+
+[node name="HolesSheet10" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 178, 125.563 )
+scale = Vector2( 0.90625, 4.3125 )
+offset = Vector2( -23, -5 )
+frame = 0
+
+[node name="HolesSheet" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 157, 42 )
+frame = 3
+
+[node name="HolesSheet6" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 4, 121 )
+offset = Vector2( 153, 17 )
+frame = 12
+
+[node name="HolesSheet7" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 4, 121 )
+offset = Vector2( 153, 17 )
+frame = 10
+
+[node name="HolesSheet4" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 4, 89 )
+offset = Vector2( 153, 17 )
+frame = 12
+
+[node name="HolesSheet5" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 4, 89 )
+offset = Vector2( 153, 17 )
+frame = 10
+
+[node name="HolesSheet3" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 180, 79 )
+offset = Vector2( -23, -5 )
+frame = 12
+
+[node name="HolesSheet2" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 180, 79 )
+offset = Vector2( -23, -5 )
+frame = 10
+
+[node name="HolesSheet8" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 4, 147 )
+offset = Vector2( 153, 17 )
+frame = 12
+
+[node name="HolesSheet9" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 4, 147 )
+offset = Vector2( 153, 17 )
+frame = 10
+
+[node name="DashObstacle2" parent="levelElements" instance=ExtResource( 4 )]
+position = Vector2( 256, 107 )
+scale = Vector2( 1, 5 )
+
+[node name="HolesSheet11" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 277, 126.563 )
+scale = Vector2( 0.90625, 4.3125 )
+offset = Vector2( -23, -5 )
+frame = 0
+
+[node name="HolesSheet12" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 256, 43 )
+frame = 3
+
+[node name="HolesSheet13" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 103, 122 )
+offset = Vector2( 153, 17 )
+frame = 12
+
+[node name="HolesSheet14" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 103, 122 )
+offset = Vector2( 153, 17 )
+frame = 10
+
+[node name="HolesSheet15" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 103, 90 )
+offset = Vector2( 153, 17 )
+frame = 12
+
+[node name="HolesSheet16" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 103, 90 )
+offset = Vector2( 153, 17 )
+frame = 10
+
+[node name="HolesSheet17" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 279, 80 )
+offset = Vector2( -23, -5 )
+frame = 12
+
+[node name="HolesSheet18" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 279, 80 )
+offset = Vector2( -23, -5 )
+frame = 10
+
+[node name="HolesSheet19" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 103, 148 )
+offset = Vector2( 153, 17 )
+frame = 12
+
+[node name="HolesSheet20" parent="levelElements" instance=ExtResource( 5 )]
+position = Vector2( 103, 148 )
+offset = Vector2( 153, 17 )
+frame = 10
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 90 )
+
+[node name="BaseScenarioOver" parent="." instance=ExtResource( 7 )]
