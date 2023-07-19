@@ -602,6 +602,7 @@ frame = 70
 position = Vector2( 0, -3 )
 frames = SubResource( 69 )
 animation = "idle_with_dash"
+frame = 5
 playing = true
 
 [node name="PushRight" type="RayCast2D" parent="."]

@@ -21,6 +21,10 @@ func _on_player_dashing(is_dashing):
 		_restart_level()
 
 func _on_body_entered(body):
+	print("Colidiu com: " + body.name) # imprime o nome do objeto com o qual colidiu
+	print("Caminho do objeto: " + body.filename) # imprime o caminho do objeto
+	if body.filename == "res://scenes/ui/Pushable.tscn":
+			body.queue_free() # destrói o objeto que colidiu com a caixa
 	if body == player:
 		player_inside = true
 		# Se o jogador não pode passar enquanto estiver usando o dash, reinicie a fase
@@ -28,6 +32,9 @@ func _on_body_entered(body):
 			_restart_level()
 		# Caso contrário, se o jogador não está em dash, também reinicie a fase
 		elif !player.is_dashing:
+			$morte.play()
+			player.is_dashing = true
+			yield(get_tree().create_timer(0.5), "timeout")
 			_restart_level()
 
 func _on_body_exited(body):

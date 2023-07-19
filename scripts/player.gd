@@ -103,23 +103,25 @@ func start_dash(direction):
 	$dashSound.play()
 	if !is_dashing and direction.length() > 0 and can_dash:
 		is_dashing = true
-		emit_signal("dashing", is_dashing)
+		emit_signal("dashing", is_dashing) # emitindo sinal
 		can_dash = false # for test
 		dash_direction = direction.normalized()
 		dash_elapsed_time = 0.0 # Reset elapsed time
-		
+
 		# Definir animação de dash e velocidade
 		set_dash_animation_frame(direction, 0)
 		$AnimatedSprite.speed_scale = 4.0
 		$AnimatedSprite.play()
-		
-		get_tree().create_timer(dash_duration).connect("timeout", self, "end_dash")
 
+		# Agora o YSort ouve o sinal e desabilita a classificação.
+		get_tree().create_timer(dash_duration).connect("timeout", self, "end_dash")
 
 func end_dash():
 	is_dashing = false
-	emit_signal("dashing", is_dashing)
+	emit_signal("dashing", is_dashing) # emitindo sinal
 	play_animation("idle")
+
+	# O YSort ouve o sinal e habilita a classificação novamente.
 
 func set_dash_animation_frame(direction, frame_index):
 	var dash_animation = "dash_horizontal"

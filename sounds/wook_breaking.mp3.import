@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wook_breaking.mp3-486108b8fb51e0976939b0bcc5eb3318.mp3str"
+
+[deps]
+
+source_file="res://sounds/wook_breaking.mp3"
+dest_files=[ "res://.import/wook_breaking.mp3-486108b8fb51e0976939b0bcc5eb3318.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
