@@ -10,9 +10,13 @@ config_version=4
 
 [application]
 
-config/name="Projeto-fjd1"
+config/name="Projeto-2"
 run/main_scene="res://scenes/ui/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+MusicController="*res://prefabs/MusicController.tscn"
 
 [display]
 

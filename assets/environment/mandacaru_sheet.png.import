@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_or_dead_obstacle.png-e9bbaed663f3baabf5632f36dd229ce5.stex"
+path="res://.import/mandacaru_sheet.png-982c3b68ace268406d4f00f82cfe7c37.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/dash_or_dead_obstacle.png"
-dest_files=[ "res://.import/dash_or_dead_obstacle.png-e9bbaed663f3baabf5632f36dd229ce5.stex" ]
+source_file="res://assets/environment/mandacaru_sheet.png"
+dest_files=[ "res://.import/mandacaru_sheet.png-982c3b68ace268406d4f00f82cfe7c37.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

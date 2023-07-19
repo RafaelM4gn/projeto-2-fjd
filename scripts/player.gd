@@ -36,7 +36,6 @@ func _physics_process(delta):
 		if Input.is_action_pressed("move_up"):
 			direction.y -= 1
 			
-			
 		if direction.x == 1:
 			$PushRight.set_enabled(true)
 		else:
@@ -93,6 +92,7 @@ func _physics_process(delta):
 		if direction.length() > 0:
 			play_animation("walk")
 		else:
+			$stepSound.play()
 			play_animation("idle")
 
 		# Executar o dash quando o botão for pressionado
@@ -100,6 +100,7 @@ func _physics_process(delta):
 			start_dash(direction)
 
 func start_dash(direction):
+	$dashSound.play()
 	if !is_dashing and direction.length() > 0 and can_dash:
 		is_dashing = true
 		emit_signal("dashing", is_dashing)
@@ -134,10 +135,7 @@ func set_dash_animation_frame(direction, frame_index):
 
 func play_animation(base_animation_name):
 	var animation_name = base_animation_name
-	if animation_name == "idle":
-		$AnimatedSprite.speed_scale = 2.25  # Velocidade normal para outras animações
-	else:
-		$AnimatedSprite.speed_scale = 1.0  # Velocidade normal para outras animações
+	$AnimatedSprite.speed_scale = 15.0  # Velocidade normal para outras animações
 	if can_dash:
 		animation_name += "_with_dash"
 	
