@@ -602,7 +602,7 @@ frame = 70
 position = Vector2( 0, -3 )
 frames = SubResource( 69 )
 animation = "idle_with_dash"
-frame = 3
+frame = 9
 playing = true
 
 [node name="PushRight" type="RayCast2D" parent="."]
@@ -636,7 +636,10 @@ collide_with_areas = true
 [node name="stepSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 0, -3 )
 stream = ExtResource( 3 )
+pitch_scale = 1.6
 
 [node name="dashSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 0, -3 )
 stream = ExtResource( 4 )
+volume_db = -20.0
+pitch_scale = 2.5
